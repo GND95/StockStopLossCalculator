@@ -44,7 +44,7 @@ namespace StockStopLossCalculator
             Calculate();            
         }
 
-        private void stopLossTB_KeyDown(object sender, KeyEventArgs e)
+        private void stopLossTB_KeyDown(object sender, KeyEventArgs e) //allows enter key to also be used for calculation
         {
             if (e.KeyData == Keys.Enter)
             {
