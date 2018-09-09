@@ -61,6 +61,7 @@
             this.startPriceTB.Name = "startPriceTB";
             this.startPriceTB.Size = new System.Drawing.Size(116, 26);
             this.startPriceTB.TabIndex = 0;
+            this.startPriceTB.KeyDown += new System.Windows.Forms.KeyEventHandler(this.startPriceTB_KeyDown);
             // 
             // label1
             // 
@@ -73,15 +74,16 @@
             // 
             // buyIncrementTB
             // 
-            this.buyIncrementTB.Location = new System.Drawing.Point(135, 39);
+            this.buyIncrementTB.Location = new System.Drawing.Point(140, 39);
             this.buyIncrementTB.Name = "buyIncrementTB";
             this.buyIncrementTB.Size = new System.Drawing.Size(116, 26);
             this.buyIncrementTB.TabIndex = 1;
+            this.buyIncrementTB.KeyDown += new System.Windows.Forms.KeyEventHandler(this.buyIncrementTB_KeyDown);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(127, 16);
+            this.label2.Location = new System.Drawing.Point(132, 16);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(148, 20);
             this.label2.TabIndex = 1;
@@ -89,16 +91,16 @@
             // 
             // stopLossTB
             // 
-            this.stopLossTB.Location = new System.Drawing.Point(262, 39);
+            this.stopLossTB.Location = new System.Drawing.Point(271, 39);
             this.stopLossTB.Name = "stopLossTB";
-            this.stopLossTB.Size = new System.Drawing.Size(116, 26);
+            this.stopLossTB.Size = new System.Drawing.Size(112, 26);
             this.stopLossTB.TabIndex = 2;
             this.stopLossTB.KeyDown += new System.Windows.Forms.KeyEventHandler(this.stopLossTB_KeyDown);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(274, 16);
+            this.label3.Location = new System.Drawing.Point(283, 16);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(109, 20);
             this.label3.TabIndex = 1;
@@ -107,7 +109,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(7, 99);
+            this.label4.Location = new System.Drawing.Point(3, 99);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(107, 20);
             this.label4.TabIndex = 1;
@@ -116,7 +118,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(131, 99);
+            this.label5.Location = new System.Drawing.Point(155, 99);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(81, 20);
             this.label5.TabIndex = 1;
@@ -125,7 +127,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(258, 99);
+            this.label6.Location = new System.Drawing.Point(263, 99);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(126, 20);
             this.label6.TabIndex = 1;
@@ -134,11 +136,11 @@
             // textBox4
             // 
             this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(6, 122);
+            this.textBox4.Location = new System.Drawing.Point(2, 122);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
             this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(116, 40);
+            this.textBox4.Size = new System.Drawing.Size(128, 40);
             this.textBox4.TabIndex = 0;
             this.textBox4.TabStop = false;
             this.textBox4.Text = "First Position";
@@ -146,7 +148,7 @@
             // buyPoint1TB
             // 
             this.buyPoint1TB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buyPoint1TB.Location = new System.Drawing.Point(135, 122);
+            this.buyPoint1TB.Location = new System.Drawing.Point(140, 122);
             this.buyPoint1TB.Multiline = true;
             this.buyPoint1TB.Name = "buyPoint1TB";
             this.buyPoint1TB.ReadOnly = true;
@@ -157,7 +159,7 @@
             // stopLoss1TB
             // 
             this.stopLoss1TB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.stopLoss1TB.Location = new System.Drawing.Point(262, 122);
+            this.stopLoss1TB.Location = new System.Drawing.Point(267, 122);
             this.stopLoss1TB.Multiline = true;
             this.stopLoss1TB.Name = "stopLoss1TB";
             this.stopLoss1TB.ReadOnly = true;
@@ -168,11 +170,11 @@
             // textBox7
             // 
             this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(6, 168);
+            this.textBox7.Location = new System.Drawing.Point(2, 168);
             this.textBox7.Multiline = true;
             this.textBox7.Name = "textBox7";
             this.textBox7.ReadOnly = true;
-            this.textBox7.Size = new System.Drawing.Size(116, 40);
+            this.textBox7.Size = new System.Drawing.Size(128, 40);
             this.textBox7.TabIndex = 0;
             this.textBox7.TabStop = false;
             this.textBox7.Text = "Second Position";
@@ -180,7 +182,7 @@
             // buyPoint2TB
             // 
             this.buyPoint2TB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buyPoint2TB.Location = new System.Drawing.Point(135, 168);
+            this.buyPoint2TB.Location = new System.Drawing.Point(140, 168);
             this.buyPoint2TB.Multiline = true;
             this.buyPoint2TB.Name = "buyPoint2TB";
             this.buyPoint2TB.ReadOnly = true;
@@ -191,7 +193,7 @@
             // stopLoss2TB
             // 
             this.stopLoss2TB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.stopLoss2TB.Location = new System.Drawing.Point(262, 168);
+            this.stopLoss2TB.Location = new System.Drawing.Point(267, 168);
             this.stopLoss2TB.Multiline = true;
             this.stopLoss2TB.Name = "stopLoss2TB";
             this.stopLoss2TB.ReadOnly = true;
@@ -202,11 +204,11 @@
             // textBox10
             // 
             this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox10.Location = new System.Drawing.Point(6, 214);
+            this.textBox10.Location = new System.Drawing.Point(2, 214);
             this.textBox10.Multiline = true;
             this.textBox10.Name = "textBox10";
             this.textBox10.ReadOnly = true;
-            this.textBox10.Size = new System.Drawing.Size(116, 40);
+            this.textBox10.Size = new System.Drawing.Size(128, 40);
             this.textBox10.TabIndex = 0;
             this.textBox10.TabStop = false;
             this.textBox10.Text = "Third Position";
@@ -214,7 +216,7 @@
             // buyPoint3TB
             // 
             this.buyPoint3TB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buyPoint3TB.Location = new System.Drawing.Point(135, 214);
+            this.buyPoint3TB.Location = new System.Drawing.Point(140, 214);
             this.buyPoint3TB.Multiline = true;
             this.buyPoint3TB.Name = "buyPoint3TB";
             this.buyPoint3TB.ReadOnly = true;
@@ -225,7 +227,7 @@
             // stopLoss3TB
             // 
             this.stopLoss3TB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.stopLoss3TB.Location = new System.Drawing.Point(262, 214);
+            this.stopLoss3TB.Location = new System.Drawing.Point(267, 214);
             this.stopLoss3TB.Multiline = true;
             this.stopLoss3TB.Name = "stopLoss3TB";
             this.stopLoss3TB.ReadOnly = true;
@@ -236,11 +238,11 @@
             // textBox13
             // 
             this.textBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox13.Location = new System.Drawing.Point(6, 260);
+            this.textBox13.Location = new System.Drawing.Point(2, 260);
             this.textBox13.Multiline = true;
             this.textBox13.Name = "textBox13";
             this.textBox13.ReadOnly = true;
-            this.textBox13.Size = new System.Drawing.Size(116, 40);
+            this.textBox13.Size = new System.Drawing.Size(128, 40);
             this.textBox13.TabIndex = 0;
             this.textBox13.TabStop = false;
             this.textBox13.Text = "Fourth Position";
@@ -248,7 +250,7 @@
             // buyPoint4TB
             // 
             this.buyPoint4TB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buyPoint4TB.Location = new System.Drawing.Point(135, 260);
+            this.buyPoint4TB.Location = new System.Drawing.Point(140, 260);
             this.buyPoint4TB.Multiline = true;
             this.buyPoint4TB.Name = "buyPoint4TB";
             this.buyPoint4TB.ReadOnly = true;
@@ -259,7 +261,7 @@
             // stopLoss4TB
             // 
             this.stopLoss4TB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.stopLoss4TB.Location = new System.Drawing.Point(262, 260);
+            this.stopLoss4TB.Location = new System.Drawing.Point(267, 260);
             this.stopLoss4TB.Multiline = true;
             this.stopLoss4TB.Name = "stopLoss4TB";
             this.stopLoss4TB.ReadOnly = true;
@@ -270,11 +272,11 @@
             // textBox16
             // 
             this.textBox16.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox16.Location = new System.Drawing.Point(6, 306);
+            this.textBox16.Location = new System.Drawing.Point(2, 306);
             this.textBox16.Multiline = true;
             this.textBox16.Name = "textBox16";
             this.textBox16.ReadOnly = true;
-            this.textBox16.Size = new System.Drawing.Size(116, 40);
+            this.textBox16.Size = new System.Drawing.Size(128, 40);
             this.textBox16.TabIndex = 0;
             this.textBox16.TabStop = false;
             this.textBox16.Text = "Fifth Position";
@@ -282,7 +284,7 @@
             // buyPoint5TB
             // 
             this.buyPoint5TB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buyPoint5TB.Location = new System.Drawing.Point(135, 306);
+            this.buyPoint5TB.Location = new System.Drawing.Point(140, 306);
             this.buyPoint5TB.Multiline = true;
             this.buyPoint5TB.Name = "buyPoint5TB";
             this.buyPoint5TB.ReadOnly = true;
@@ -293,7 +295,7 @@
             // stopLoss5TB
             // 
             this.stopLoss5TB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.stopLoss5TB.Location = new System.Drawing.Point(262, 306);
+            this.stopLoss5TB.Location = new System.Drawing.Point(267, 306);
             this.stopLoss5TB.Multiline = true;
             this.stopLoss5TB.Name = "stopLoss5TB";
             this.stopLoss5TB.ReadOnly = true;
@@ -304,7 +306,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(137, 352);
+            this.button1.Location = new System.Drawing.Point(142, 352);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(114, 59);
             this.button1.TabIndex = 3;
@@ -316,7 +318,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(387, 423);
+            this.ClientSize = new System.Drawing.Size(390, 423);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -342,6 +344,8 @@
             this.Controls.Add(this.textBox7);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.startPriceTB);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Stop-Loss Calc";
             this.ResumeLayout(false);
