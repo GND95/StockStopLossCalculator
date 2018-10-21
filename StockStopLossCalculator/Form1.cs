@@ -100,11 +100,55 @@ namespace StockStopLossCalculator
             try
             {
                 ChangeResultTB.Text = Calculate_Two(Convert.ToDouble(Y1TB.Text), Convert.ToDouble(Y2TB.Text)).ToString("N2") + "%";
+                button3.Enabled = true;
             }
             catch
             {
                 MessageBox.Show("Please enter a valid input in the Start Value and End Value text boxes.", "Error");
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                gainLossTB.Text = ChangeResultTB.Text.TrimEnd('%');
+                gainLossTB.Text = "$" + ((Convert.ToDouble(gainLossTB.Text) / 100) * Convert.ToDouble(priorCashValueTB.Text)).ToString("N2");
+            }
+            catch
+            {
+                gainLossTB.Text = "$";
+                MessageBox.Show("Please enter a valid input in the Prior Cash Value text box.", "Error");
+            }
+        }
+
+        private void Y1TB_KeyDown(object sender, KeyEventArgs e) //allows enter key to also be used for calculation while cursor is in "Start Value" text box
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                button2.PerformClick();
+            }
+        }
+
+        private void Y2TB_KeyDown(object sender, KeyEventArgs e) //allows enter key to also be used for calculation while cursor is in "End Value" text box
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                button2.PerformClick();
+            }
+        }
+
+        private void priorCashValueTB_KeyDown(object sender, KeyEventArgs e) //allows enter key to also be used for calculation while cursor is in "Prior Cash Value" text box
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                button3.PerformClick();
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
         }
     }
 }

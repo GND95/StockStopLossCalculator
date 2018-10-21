@@ -61,6 +61,12 @@
             this.ChangeResultTB = new System.Windows.Forms.TextBox();
             this.Y1TB = new System.Windows.Forms.TextBox();
             this.Y2TB = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.priorCashValueTB = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.gainLossTB = new System.Windows.Forms.TextBox();
+            this.button4 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // startPriceTB
@@ -334,9 +340,9 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(484, 352);
+            this.button2.Location = new System.Drawing.Point(558, 127);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(114, 59);
+            this.button2.Size = new System.Drawing.Size(114, 64);
             this.button2.TabIndex = 6;
             this.button2.Text = "Calculate";
             this.button2.UseVisualStyleBackColor = true;
@@ -364,20 +370,20 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label10.Location = new System.Drawing.Point(461, 183);
+            this.label10.Location = new System.Drawing.Point(408, 99);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(160, 25);
+            this.label10.Size = new System.Drawing.Size(154, 25);
             this.label10.TabIndex = 7;
-            this.label10.Text = "Percent Change:";
+            this.label10.Text = "Percent Change";
             // 
             // ChangeResultTB
             // 
             this.ChangeResultTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.ChangeResultTB.Location = new System.Drawing.Point(404, 236);
+            this.ChangeResultTB.Location = new System.Drawing.Point(413, 127);
             this.ChangeResultTB.Multiline = true;
             this.ChangeResultTB.Name = "ChangeResultTB";
             this.ChangeResultTB.ReadOnly = true;
-            this.ChangeResultTB.Size = new System.Drawing.Size(262, 64);
+            this.ChangeResultTB.Size = new System.Drawing.Size(139, 64);
             this.ChangeResultTB.TabIndex = 8;
             this.ChangeResultTB.TabStop = false;
             this.ChangeResultTB.Text = "%";
@@ -388,6 +394,7 @@
             this.Y1TB.Name = "Y1TB";
             this.Y1TB.Size = new System.Drawing.Size(112, 26);
             this.Y1TB.TabIndex = 4;
+            this.Y1TB.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Y1TB_KeyDown);
             // 
             // Y2TB
             // 
@@ -395,12 +402,80 @@
             this.Y2TB.Name = "Y2TB";
             this.Y2TB.Size = new System.Drawing.Size(112, 26);
             this.Y2TB.TabIndex = 5;
+            this.Y2TB.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Y2TB_KeyDown);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(419, 214);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(127, 20);
+            this.label11.TabIndex = 9;
+            this.label11.Text = "Prior Cash Value";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(409, 280);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(147, 20);
+            this.label12.TabIndex = 10;
+            this.label12.Text = "Potential Gain/Loss";
+            // 
+            // priorCashValueTB
+            // 
+            this.priorCashValueTB.Location = new System.Drawing.Point(413, 237);
+            this.priorCashValueTB.Name = "priorCashValueTB";
+            this.priorCashValueTB.Size = new System.Drawing.Size(133, 26);
+            this.priorCashValueTB.TabIndex = 11;
+            this.priorCashValueTB.KeyDown += new System.Windows.Forms.KeyEventHandler(this.priorCashValueTB_KeyDown);
+            // 
+            // button3
+            // 
+            this.button3.Enabled = false;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(558, 230);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(114, 38);
+            this.button3.TabIndex = 12;
+            this.button3.Text = "Calculate";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // gainLossTB
+            // 
+            this.gainLossTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            this.gainLossTB.Location = new System.Drawing.Point(413, 306);
+            this.gainLossTB.Multiline = true;
+            this.gainLossTB.Name = "gainLossTB";
+            this.gainLossTB.ReadOnly = true;
+            this.gainLossTB.Size = new System.Drawing.Size(259, 40);
+            this.gainLossTB.TabIndex = 13;
+            this.gainLossTB.TabStop = false;
+            this.gainLossTB.Text = "$";
+            // 
+            // button4
+            // 
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(558, 352);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(114, 59);
+            this.button4.TabIndex = 14;
+            this.button4.Text = "Restart";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(678, 423);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.gainLossTB);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.priorCashValueTB);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.Y2TB);
             this.Controls.Add(this.Y1TB);
             this.Controls.Add(this.ChangeResultTB);
@@ -478,6 +553,12 @@
         private System.Windows.Forms.TextBox ChangeResultTB;
         private System.Windows.Forms.TextBox Y1TB;
         private System.Windows.Forms.TextBox Y2TB;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox priorCashValueTB;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox gainLossTB;
+        private System.Windows.Forms.Button button4;
     }
 }
 
