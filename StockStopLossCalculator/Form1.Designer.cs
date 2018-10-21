@@ -58,9 +58,9 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.ChangeResultTB = new System.Windows.Forms.TextBox();
+            this.Y1TB = new System.Windows.Forms.TextBox();
+            this.Y2TB = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // startPriceTB
@@ -328,7 +328,7 @@
             this.label7.Location = new System.Drawing.Point(396, -17);
             this.label7.MaximumSize = new System.Drawing.Size(2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(2, 443);
+            this.label7.Size = new System.Drawing.Size(2, 0);
             this.label7.TabIndex = 0;
             // 
             // button2
@@ -337,9 +337,10 @@
             this.button2.Location = new System.Drawing.Point(484, 352);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(114, 59);
-            this.button2.TabIndex = 4;
+            this.button2.TabIndex = 6;
             this.button2.Text = "Calculate";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label8
             // 
@@ -369,40 +370,40 @@
             this.label10.TabIndex = 7;
             this.label10.Text = "Percent Change:";
             // 
-            // textBox1
+            // ChangeResultTB
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.textBox1.Location = new System.Drawing.Point(404, 236);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(262, 64);
-            this.textBox1.TabIndex = 8;
-            this.textBox1.TabStop = false;
-            this.textBox1.Text = "%";
+            this.ChangeResultTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.ChangeResultTB.Location = new System.Drawing.Point(404, 236);
+            this.ChangeResultTB.Multiline = true;
+            this.ChangeResultTB.Name = "ChangeResultTB";
+            this.ChangeResultTB.ReadOnly = true;
+            this.ChangeResultTB.Size = new System.Drawing.Size(262, 64);
+            this.ChangeResultTB.TabIndex = 8;
+            this.ChangeResultTB.TabStop = false;
+            this.ChangeResultTB.Text = "%";
             // 
-            // textBox2
+            // Y1TB
             // 
-            this.textBox2.Location = new System.Drawing.Point(413, 39);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(112, 26);
-            this.textBox2.TabIndex = 9;
+            this.Y1TB.Location = new System.Drawing.Point(413, 39);
+            this.Y1TB.Name = "Y1TB";
+            this.Y1TB.Size = new System.Drawing.Size(112, 26);
+            this.Y1TB.TabIndex = 4;
             // 
-            // textBox3
+            // Y2TB
             // 
-            this.textBox3.Location = new System.Drawing.Point(544, 39);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(112, 26);
-            this.textBox3.TabIndex = 10;
+            this.Y2TB.Location = new System.Drawing.Point(544, 39);
+            this.Y2TB.Name = "Y2TB";
+            this.Y2TB.Size = new System.Drawing.Size(112, 26);
+            this.Y2TB.TabIndex = 5;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(678, 423);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.Y2TB);
+            this.Controls.Add(this.Y1TB);
+            this.Controls.Add(this.ChangeResultTB);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -474,9 +475,9 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox ChangeResultTB;
+        private System.Windows.Forms.TextBox Y1TB;
+        private System.Windows.Forms.TextBox Y2TB;
     }
 }
 

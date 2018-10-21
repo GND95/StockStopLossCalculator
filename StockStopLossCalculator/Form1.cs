@@ -12,9 +12,7 @@ namespace StockStopLossCalculator
 {
     public partial class Form1 : Form
     {
-        double startingPrice;
-        double buyIncrements;
-        double stopLoss;        
+        double startingPrice, buyIncrements, stopLoss;
 
         public Form1()
         {
@@ -29,11 +27,15 @@ namespace StockStopLossCalculator
             buyPoint4TB.Text = ((Convert.ToDouble(buyPoint3TB.Text) * (buyIncrements / 100) + Convert.ToDouble(buyPoint3TB.Text))).ToString("N2");
             buyPoint5TB.Text = ((Convert.ToDouble(buyPoint4TB.Text) * (buyIncrements / 100) + Convert.ToDouble(buyPoint4TB.Text))).ToString("N2");
 
-            stopLoss1TB.Text = ((Convert.ToDouble(buyPoint1TB.Text)) - ((Convert.ToDouble(buyPoint1TB.Text) * (stopLoss / 100)))).ToString("N2");
-            stopLoss2TB.Text = ((Convert.ToDouble(buyPoint2TB.Text)) - ((Convert.ToDouble(buyPoint2TB.Text) * (stopLoss / 100)))).ToString("N2");
-            stopLoss3TB.Text = ((Convert.ToDouble(buyPoint3TB.Text)) - ((Convert.ToDouble(buyPoint3TB.Text) * (stopLoss / 100)))).ToString("N2");
-            stopLoss4TB.Text = ((Convert.ToDouble(buyPoint4TB.Text)) - ((Convert.ToDouble(buyPoint4TB.Text) * (stopLoss / 100)))).ToString("N2");
-            stopLoss5TB.Text = ((Convert.ToDouble(buyPoint5TB.Text)) - ((Convert.ToDouble(buyPoint5TB.Text) * (stopLoss / 100)))).ToString("N2");
+            stopLoss1TB.Text = ((1 - ((Convert.ToDouble(stopLossTB.Text) / 100))) * Convert.ToDouble(startPriceTB.Text)).ToString("N2");
+            stopLoss2TB.Text = ((1 - ((Convert.ToDouble(stopLossTB.Text) / 100))) * Convert.ToDouble(buyPoint1TB.Text)).ToString("N2");
+            stopLoss3TB.Text = ((1 - ((Convert.ToDouble(stopLossTB.Text) / 100))) * Convert.ToDouble(buyPoint2TB.Text)).ToString("N2");
+            stopLoss4TB.Text = ((1 - ((Convert.ToDouble(stopLossTB.Text) / 100))) * Convert.ToDouble(buyPoint3TB.Text)).ToString("N2");
+            stopLoss5TB.Text = ((1 - ((Convert.ToDouble(stopLossTB.Text) / 100))) * Convert.ToDouble(buyPoint4TB.Text)).ToString("N2");
+        }
+        double Calculate_Two(Double Y1, Double Y2)
+        {
+            return (((Y2 - Y1) / Y1) * 100);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -44,7 +46,7 @@ namespace StockStopLossCalculator
             }
             catch
             {
-                MessageBox.Show("Please enter a valid input in the Stock Start Price text box.");
+                MessageBox.Show("Please enter a valid input in the Stock Start Price text box.", "Error");
                 return; // stop further message boxes from popping up after the first error
             }
             try
@@ -53,7 +55,7 @@ namespace StockStopLossCalculator
             }
             catch
             {
-                MessageBox.Show("Please enter a valid input in the Buy Increments (%) text box.");
+                MessageBox.Show("Please enter a valid input in the Buy Increments (%) text box.", "Error");
                 return; // stop further message boxes from popping up after the second error
             }
             try
@@ -62,7 +64,7 @@ namespace StockStopLossCalculator
             }
             catch
             {
-                MessageBox.Show("Please enter a valid input in the Stop Loss (%) text box.");
+                MessageBox.Show("Please enter a valid input in the Stop Loss (%) text box.", "Error");
                 return; // stop the software from prematurely using the calculate function
             }
 
@@ -90,6 +92,18 @@ namespace StockStopLossCalculator
             if (e.KeyData == Keys.Enter)
             {
                 button1.PerformClick();
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ChangeResultTB.Text = Calculate_Two(Convert.ToDouble(Y1TB.Text), Convert.ToDouble(Y2TB.Text)).ToString("N2") + "%";
+            }
+            catch
+            {
+                MessageBox.Show("Please enter a valid input in the Start Value and End Value text boxes.", "Error");
             }
         }
     }
