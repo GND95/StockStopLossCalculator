@@ -132,11 +132,11 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(155, 99);
+            this.label5.Location = new System.Drawing.Point(138, 99);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(81, 20);
+            this.label5.Size = new System.Drawing.Size(121, 20);
             this.label5.TabIndex = 1;
-            this.label5.Text = "Buy Value";
+            this.label5.Text = "Entry/Sell Value";
             // 
             // label6
             // 
